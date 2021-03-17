@@ -31,4 +31,4 @@ Access to these and more are granted during the onboarding process.
     - [x] GitHub
     - [x] 1Password (_you'll need to setup an authenticator app before adding your yubikey device_)
 
-**Note: Always favour Google SSO when authenticating into the various Systems we use **
+**Note: Always favour Google SSO when authenticating into the various Systems we use**
