@@ -22,12 +22,13 @@ Access to these and more are granted during the onboarding process.
 
 * Read the [introspection](https://github.com/EngineerBetter/introspection) repo
 * [Set up your Yubikey](https://www.engineerbetter.com/blog/yubikey-all-the-things/)
-  - [ ] Upload yubikey gpg key (_for signing commits_) to GitHub
-  - [ ] Upload yubikey public key (_for GitHub server interactions_) to GitHub
-  - [ ] Configure yubikey MFA:
-    - [ ] Google
-    - [ ] AWS
-    - [ ] Azure (_if you have an account_)
-    - [ ] GitHub
-    - [ ] 1Password (_you'll need to setup an authenticator app before adding your yubikey device_)
-* Always favour Google SSO when authenticating into the various Systems we use :thumpsup:
+  - [x] Upload yubikey gpg key (_for signing commits_) to GitHub
+  - [x] Upload yubikey public key (_for GitHub server interactions_) to GitHub
+  - [x] Configure yubikey MFA:
+    - [x] Google
+    - [x] AWS
+    - [x] Azure (_if you have an account_)
+    - [x] GitHub
+    - [x] 1Password (_you'll need to setup an authenticator app before adding your yubikey device_)
+
+**Note: Always favour Google SSO when authenticating into the various Systems we use **
