@@ -1,8 +1,8 @@
 # Setup
 
-We prodominently use the Apple MacBook, and thus use MacOS and with that varioues tools/technologies for client engagements and bench work. We generally use the following applications/tools:
+We use various tools/technologies for client engagements and bench work. As such we generally use the following applications/tools:
 
-| Utilities | Formatters | Database | Languages | Git | Containers | k8s | CF/BOSH | Terraform | Cloud | Security | Apps |
+| Utilities | Formatting Tools | Database Tools | Languages | Git Tools | Container Tools | k8s | CF/BOSH/Concourse/Credhub | Terraform | Cloud IAAS | Security Tools | Apps |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | ripgrep | jq | postgresql | node | git-secrets | docker | kubernetes-cli | cf-cli | terraform-docs | awscli | openssl | brave-browser |
 | tree | yj | sqlite | yarn | tig | skaffold | kustomize | bosh-cli | tflint | awslogs | gnupg | visual-studio-code |
@@ -33,9 +33,9 @@ We prodominently use the Apple MacBook, and thus use MacOS and with that varioue
 | gnu-sed | - | - | - | - | - | - | - | - | - | - | - |
 | z | - | - | - | - | - | - | - | - | - | - | - |
 
-You can always install the following (_plus some extra tooling_) using the [Brewfile](Brewfile) provided. For instructions on how to configure your system see below:
+You can always install the following using the [Brewfile](Brewfile) provided. For instructions on how to configure your system see below:
 
-To Install [Homebrew](https://brew.sh) see below (_although it's best to check if this command is up to date_):
+To Install using [Homebrew](https://brew.sh) see below (_although it's best to check if this command is up to date_):
 
 ```sh
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
