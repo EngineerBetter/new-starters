@@ -9,5 +9,6 @@ We use various tools/technologies for client engagements and beach work. You may
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Update brew definitions
 $ brew update
-$ brew bundle install --file=Brewfile
+# Install all the things in the Brewfile
+$ brew bundle install --file <(https://raw.githubusercontent.com/EngineerBetter/new-starters/main/setup/Brewfile)
 ```
