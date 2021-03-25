@@ -6,7 +6,7 @@ If this is you, then welcome! We'll keep this succinct so information is easier 
 
 ## Stuff you'll use
 
-Access to these and more are granted during the onboarding process.
+Access to these and more are granted during the onboarding process. If you can't access any of the below, please contact the business operations folks.
 
 * [1Password](https://engineerbetter.1password.com) for secrets management
 * [EBCI](https://ci.engineerbetter.com) is our central Concourse deployment for CI/CD
@@ -16,8 +16,8 @@ Access to these and more are granted during the onboarding process.
 * [FreeAgent](https://engineerbetter.freeagent.com) for timesheets
 * [Tracker](https://www.pivotaltracker.com) for story management
 * [Miro](https://miro.com) for collaborative illustrating
+* [Google Drive](https://drive.google.com/drive/folders/1qKZKCuIK9jF_skUv5R0mF7f9MoSYxu8e) for HR/Team related information
 * [Request Leave](https://docs.google.com/forms/d/e/1FAIpQLSdl04LSm1mUzdE1uVw2ZZAQQK_HBS4fOEfldrub0MnvYDBW3A/viewform) - if requesting annual leave it's nice to gain approval from the team
-* [EB Shared Drive](https://drive.google.com/drive/folders/1qKZKCuIK9jF_skUv5R0mF7f9MoSYxu8e) for HR/Team related information
 
 ## Stuff to do
 
@@ -32,7 +32,7 @@ Access to these and more are granted during the onboarding process.
     - [x] GitHub
     - [x] 1Password (_you'll need to setup an authenticator app before adding your yubikey device_)
 
-**Note: Always favour Google SSO when authenticating into the various Systems we use**
+**Note: Always favour Google SSO when authenticating into the various systems we use**
 
 ## Stuff to install
 
