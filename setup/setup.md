@@ -40,7 +40,7 @@ To Install using [Homebrew](https://brew.sh) see below (_although it's best to c
 ```sh
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ...
-$ cd <path to workspace>/landing-zone/setup
+$ cd <path to workspace>/new-starters/setup
 $ brew update
 $ brew bundle install --file=Brewfile
 ```
