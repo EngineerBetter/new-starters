@@ -1,6 +1,6 @@
 # Setup
 
-We use various tools/technologies for client engagements and bench work. As such we generally use the following applications/tools:
+We use various tools/technologies for client engagements and beach work. As such we generally use the following applications/tools:
 
 | Utilities | Formatting Tools | Database Tools | Languages | Git Tools | Container Tools | k8s | CF/BOSH/Concourse/Credhub | Terraform | Cloud IAAS | Security Tools | Apps |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
