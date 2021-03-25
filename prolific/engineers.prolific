@@ -143,3 +143,18 @@ Install `git-duet` and follow instructions in the [`git-authors` repository](htt
 * Observe `GIT_COMMITTER_NAME` and `GIT_COMMITTER_EMAIL` being set to the other person's details
 * `git-solo YOUR_INITIALS` so it doesn't look like you're pairing when you're not
 ---
+
+I am less likely to commit files I shouldn't
+
+Follow the instructions in the [`gitignore` repo](https://github.com/EngineerBetter/gitignore). Please also condider keeping it up-to-date with additions that should be _universally_ ignored.
+
+## Acceptance
+
+* Open a terminal
+* `mkdir $TMP/bar` - make a temporary directory
+* `cd $TMP/bar` - change into the above
+* `git init` - create a new repo
+* `touch INSERT_FILE_FROM_GITIGNORE HERE` - create a file that we're supposed to ignore
+* `git status`
+* Observe no files to add
+---
