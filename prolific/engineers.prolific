@@ -1,0 +1,145 @@
+I can access shared secrets, and store my own
+
+Check that you can access 1Password successfully.
+
+## Acceptance
+
+* Visit https://engineerbetter.1password.com
+* Log in
+* Observe that `EngineerBetter - All` and `Personal` vaults are accessible
+
+---
+
+I can easily push to/pull from GitHub on shared machines
+
+[Generate an RSA key on your Yubikey, and configure your machine to use this RSA key when authenticating SSH sessions, and tell GitHub to accept this RSA key as a means of authentication](https://www.engineerbetter.com/blog/yubikey-ssh/).
+
+## Acceptance
+
+* Ensure your Yubikey is not plugged in
+* Start a terminal session
+* `ssh-add -l` - list keys loaded for SSH authentication
+* Observe that no keys are loaded
+* `git clone git@github.com:EngineerBetter/new-starters.git $HOME/workspace/new-starters`, which will require SSH authentication
+* Observe authentication fail (because you have no keys loaded)
+* Insert your Yubikey
+* `git clone git@github.com:EngineerBetter/new-starters.git $HOME/workspace/new-starters` - try authenticating again
+* Observe the PIN entry GUI
+* Enter your PIN
+* Observe the GUI disappear, and the `git clone` complete successfully
+
+L: yubikey
+
+---
+
+I can easily access shared secrets on shared machines
+
+[Set up your Yubikey to type your 1Password secret key](https://www.engineerbetter.com/blog/yubikey-static-secret/), so you only have to remember your password when using shared machines.
+
+## Acceptance:
+
+* Start a private browser session
+* Visit https://engineerbetter.1password.com
+* Enter your email address
+* Enter your password
+* Insert your Yubikey if it is not already inserted
+* Ensure the "secret key" field of the form has focus
+* Long-press the Yubikey 'button'
+* Observe your secret key being typed into the box
+* Log in
+* Observe success
+
+L: yubikey
+
+---
+
+I understand that I should use Google SSO whenever possible
+
+In order to minimise the surface area of possible security breaches, we should use Google SSO whenever possible to signup to online services. Enterprise customers and our insurance company need to know the various systems we log into, and how we log into them.
+
+Example services to use Google OAuth/SSO for include:
+
+* Google Cloud
+* Google Apps
+* Float
+* FreeAgent
+* Slack
+* Pivotal Tracker
+* Hellosign
+* Miro
+* Zoom
+
+## Acceptance
+
+* If you've read this far, that's all you need to do :)
+
+---
+
+Hackers cannot log in as me without stealing something I own
+
+Set up multi-factor authentication on a variety of services using your Yubikey.
+
+1. [Start with GitHub using the instructions in out blog](https://www.engineerbetter.com/blog/yubikey-2fa/)
+1. Configure U2F in AWS
+1. Configure U2F for Google
+
+## Acceptance
+
+* Log in to GitHub
+* Observe prompt to touch Yubikey
+* Log in to AWS
+* Observe prompt to touch Yubikey
+* Log in to Google
+* Observe prompt to touch Yubikey
+
+L: yubikey
+
+---
+
+I can prove commits with my name on were made by someone with my Yubikey
+
+[Set up commit signing](https://www.engineerbetter.com/blog/yubikey-signed-commits/) so that Git commits are signed by your private key, meaning that you can prove that your Yubikey was present when they were made.
+
+## Acceptance
+
+* `mkdir $TMP/foo` - make a new directory
+* `cd $TMP/foo` - change into directory
+* `git init` - set directory up as a Git repository
+* `touch file` - create a file
+* `git add file` - stage the file
+* `git commit -m "test"`
+* Observe PIN entry GUI
+* `git log --show-signature`
+* Observe notes showing that the commit was signed
+* (Ignore `WARNING: This key is not certified with a trusted signature!`, this is to do with whether you've told your computer that you've checked that the key that signed the commit really belongs to who it says it does.)
+
+L: yubikey
+
+---
+
+My colleagues can easily make commits that show I was pairing with them
+
+Install `git-duet` and follow instructions in the  [`git-authors` repository](https://github.com/EngineerBetter/git-authors). Add your details to the `authors` file in the repository, and push the commit.
+
+* Open a terminal
+* `git-solo YOUR_INITIALS`
+* Observe `GIT_AUTHOR_NAME` and `GIT_AUTHOR_EMAIL` being set to your details
+* Visit https://github.com/EngineerBetter/git-authors/blob/master/authors
+* Observe your commit was pushed
+
+---
+
+I can easily make commits that show who I was pairing with
+
+Install `git-duet` and follow instructions in the [`git-authors` repository](https://github.com/EngineerBetter/git-authors).
+
+## Acceptance
+
+* Open a terminal
+* `git-solo YOUR_INITIALS`
+* Observe `GIT_AUTHOR_NAME` and `GIT_AUTHOR_EMAIL` being set to your details
+* `git-duet YOUR_INITIALS SOMEONE_ELSES_INITIALS`
+* Observe `GIT_AUTHOR_NAME` and `GIT_AUTHOR_EMAIL` being set to your details
+* Observe `GIT_COMMITTER_NAME` and `GIT_COMMITTER_EMAIL` being set to the other person's details
+* `git-solo YOUR_INITIALS` so it doesn't look like you're pairing when you're not
+---
