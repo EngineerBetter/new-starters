@@ -42,4 +42,4 @@ Access to these and more are granted during the onboarding process. If you can't
 
 ## Stuff to install
 
-For information on tools/applications and installation see the [setup](workstation-setup/setup.md) guide.
+For information on tools/applications and installation see the [workstation setup](workstation-setup/setup.md) guide.
