@@ -1,0 +1,69 @@
+I understand EngineerBetter's approach to investigative consultancy
+
+In order of preference and depending on availability, either:
+
+1. Get Deejay to talk you through the _Debugging Your Development Process_ slides
+1. Watch the [_Debugging Your Development Process_ video](https://www.youtube.com/watch?v=CDsbwfHg9zc) and read the [accompanying blog post](https://www.engineerbetter.com/blog/debugging-your-development-process/)
+
+## Acceptance
+
+* Be able to explain to a colleague:
+  * What are the three investigative techniques used?
+  * What is a Current Reality Tree?
+  * Why is the Current Reality Tree important?
+
+L: training, consultancy
+
+---
+
+I have a vague awareness of the sort of interview questions we ask in consultancy gigs
+
+Read the [list of investigative questions](https://docs.google.com/spreadsheets/d/1aozOSD-aPutqYH_X8CaMwz_tUB9tFhCL8keKK_Htl7w/edit#gid=0) that we ask in interviews.
+
+## Acceptance
+
+* Close the spreadsheet
+* See how many questions you can recall
+* See how many reasons for questions you can recall
+
+L: training, consultancy
+
+---
+
+I can draw a value stream map
+
+Create a value stream map for a process that you know well - perhaps from a past employer or engagement.
+
+It should include:
+
+* Boxes describing each stage during which a thing is worked on
+* Estimates of how long a thing is worked on for
+* Estimates of how long a thing waits between stages
+* Estimates of how often a thing is rejected between stages
+* A calculation of flow efficiency
+* A calculation of min, max, and typical lead-time-to-production
+
+## Acceptance
+
+* Show the above to one of your colleagues who has done this exercise before
+
+L: training, consultancy
+
+---
+
+I can draw a current reality tree
+
+Create a current reality tree that describes a system that you know well, perhaps a previous team, engagement or employer. If someone else is doing this exercise at the same time, you should walk each other through your CRTs and challenge each other's assertions.
+
+It should include:
+
+* Reported symptoms
+* Intermediate causes
+* Root causes
+* Any feedback loops
+
+## Acceptance
+
+* Show the CRT to one of your colleagues who has completed this exercise before
+
+L: training, consultancy
