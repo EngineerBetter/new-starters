@@ -1,12 +1,12 @@
 I can access shared secrets, and store my own
 
-Check that you can access 1Password successfully.
+Check that you can access 1Password successfully. You will need to accept an invite, and then tell one of the BizOps team on Slack that the invite has been accepted so that they can confirm it, and add you to the appropriate vaults.
 
 ## Acceptance
 
 * Visit https://engineerbetter.1password.com
 * Log in
-* Observe that `EngineerBetter - All` and `Personal` vaults are accessible
+* Observe that `EngineerBetter - All` and `Private` vaults are accessible
 
 ---
 
