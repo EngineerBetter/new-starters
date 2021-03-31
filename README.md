@@ -25,6 +25,14 @@ If you're curious what kind of stories are in the onboarding backlog, you can ta
 
 Pivotal Tracker embodies a methodology that we're keen to espouse. Using Tracker enables folks to get some initial experience with it, and also allows us to express tasks in terms of their value - something that's critical to delivering useful outcomes.
 
+## Approach to knowledge transfer
+
+We deliberately avoid documentation _unless_ we're sure it's going to add value over a long period of time. Documentation gets out-of-date very quickly, and as soon as it's out-of-date, it does more harm than good.
+
+We prefer a _just in time_ approach, in line with Kanban and the Toyota Production System, and typified by the phrase _You Ain't Gonna Need It_ (YAGNI).
+
+If something is important, it will come up in conversation or whilst pairing. If something is not important, no-one will talk about it. If you do not know a thing because it did not come up in conversation, no-one will think any the worse of you.
+
 ## Stuff you'll use
 
 Access to these and more are granted during the onboarding process. If you can't access any of the below, please contact the business operations folks.
