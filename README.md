@@ -33,6 +33,8 @@ We prefer a _just in time_ approach, in line with Kanban and the Toyota Producti
 
 If something is important, it will come up in conversation or whilst pairing. If something is not important, no-one will talk about it. If you do not know a thing because it did not come up in conversation, no-one will think any the worse of you.
 
+This approach isn't perfect, but we'd rather incur the costs of knowledge transfer only when proven necessary, rather than up-front and regardless of whether it's required.
+
 ## Stuff you'll use
 
 Access to these and more are granted during the onboarding process. If you can't access any of the below, please contact the business operations folks.
