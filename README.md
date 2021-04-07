@@ -42,7 +42,7 @@ Access to these and more are granted during the onboarding process. If you can't
 * [1Password](https://engineerbetter.1password.com) for secrets management
 * [EBCI](https://ci.engineerbetter.com) is our central Concourse deployment for CI/CD
 * [GitHub](https://github.com/EngineerBetter) - take a look around at the repos
-* [Slack](https://engineerbetter.slack.com)
+* [Slack](https://engineerbetter.slack.com) - please don't sign in on your mobile
 * [Float](https://engineerbetter.float.com) for allocations
 * [FreeAgent](https://engineerbetter.freeagent.com) for timesheets
 * [Tracker](https://www.pivotaltracker.com) for story management
