@@ -16,5 +16,11 @@ $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/
 # Update brew definitions
 $ brew update
 # Install all the things in the Brewfile
-$ brew bundle install --file <(https://raw.githubusercontent.com/EngineerBetter/new-starters/main/setup/Brewfile)
+$ brew bundle install --file <(https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
+```
+
+If you are already using `zsh` you may need to use:
+
+```
+$ brew bundle install --file <(curl -fsSL https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
 ```
