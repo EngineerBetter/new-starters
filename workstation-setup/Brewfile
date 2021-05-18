@@ -213,6 +213,7 @@ tap 'vmware-tanzu/carvel'
   # BOSH command-line interface
   brew 'bosh-cli'
   # CLI to configure and deploy tiles to Ops-Manager
+  tap 'pivotal-cf/om', 'https://github.com/pivotal-cf/om'
   brew 'pivotal-cf/om/om'
 ### }}}
 
