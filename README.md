@@ -44,6 +44,7 @@ Access to these and more are granted during the onboarding process. If you can't
 * [GitHub](https://github.com/EngineerBetter) - take a look around at the repos
 * [Slack](https://engineerbetter.slack.com) - please don't sign in on your mobile
 * [Float](https://engineerbetter.float.com) for allocations
+* [FreeAgent](https://engineerbetter.freeagent.com) for expenses.
 * [Business Central](https://businesscentral.dynamics.com/DKProd/) for timesheets (Contact Ivana if you're having access issues)
 * [Tracker](https://www.pivotaltracker.com) for story management
 * [Miro](https://miro.com) for collaborative illustrating
