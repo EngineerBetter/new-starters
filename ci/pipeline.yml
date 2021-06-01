@@ -28,7 +28,7 @@ jobs:
       trigger: true
     - get: concourse-tasks
   - task: generate-csvs
-    file: new-starters/ci/generate-tracker-csvs.sh
+    file: new-starters/ci/generate-tracker-csvs.yml
   - task: tarball-files
     file: concourse-tasks/tar/task.yml
     input_mapping: { input: csvs }
