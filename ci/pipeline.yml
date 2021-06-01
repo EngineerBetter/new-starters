@@ -1,0 +1,40 @@
+---
+resources:
+- name: new-starters
+  type: git
+  webhook_token: ((webhook_token))
+  source:
+    uri: https://github.com/EngineerBetter/new-starters.git
+    branch: main
+- name: concourse-tasks
+  type: git
+  source:
+    uri: https://github.com/EngineerBetter/concourse-tasks.git
+    tag_filter: 0.0.39
+- name: s3-bucket
+  type: s3
+  source:
+    bucket: ((misc-ci-artifacts-bucket.bucket))
+    region_name: ((misc-ci-artifacts-bucket.region_name))
+    access_key_id: ((misc-ci-artifacts-bucket.access_key_id))
+    secret_access_key: ((misc-ci-artifacts-bucket.secret_access_key))
+    versioned_file: new-starters/csvs.tar.gz
+
+jobs:
+- name: generate-csvs
+  plan:
+  - in_parallel:
+    - get: new-starters
+      trigger: true
+    - get: concourse-tasks
+  - task: generate-csvs
+    file: new-starters/ci/generate-tracker-csvs.sh
+  - task: tarball-files
+    file: concourse-tasks/tar/task.yml
+    input_mapping: { input: csvs }
+    output_mapping: { output: tarball }
+    params:
+      TARBALL_NAME: csvs
+  - put: s3-bucket
+    params:
+      file: tarball/csvs.tar.gz

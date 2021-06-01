@@ -1,0 +1,14 @@
+---
+platform: linux
+
+inputs:
+- name: new-starters
+
+outputs:
+- name: csvs
+
+run:
+  path: new-starters/ci/generate-tracker-csvs.sh
+  args:
+  - new-starters/prolific/
+  - csvs/
