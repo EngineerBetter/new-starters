@@ -16,3 +16,5 @@ do
 done
 
 echo "Done."
+
+cat ${dest_dir}*.csv
