@@ -59,12 +59,21 @@ resources:
     password: ((concourse_password))
 
 jobs:
+- name: set-pipeline
+  <<: *alerts
+  plan:
+  - get: new-starters
+    trigger: true
+  - set_pipeline: self
+    file: new-starters/ci/pipeline.yml
+
 - name: generate-csvs
   <<: *alerts
   plan:
   - in_parallel:
     - get: new-starters
       trigger: true
+      passed: [set-pipeline]
     - get: concourse-tasks
     - get: pcf-ops
   - task: generate-csvs
