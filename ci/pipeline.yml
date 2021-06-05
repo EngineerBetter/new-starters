@@ -1,4 +1,28 @@
 ---
+alerts: &alerts
+  on_success:
+    put: slack
+    params:
+      alert_type: fixed
+      disable: ((disable_alerts))
+  on_failure:
+    put: slack
+    params:
+      alert_type: broke
+      disable: ((disable_alerts))
+  on_error:
+    put: slack
+    params:
+      alert_type: broke
+      color: "#F5A623"
+      disable: ((disable_alerts))
+
+resource_types:
+- name: slack-alert
+  type: registry-image
+  source:
+    repository: arbourd/concourse-slack-alert-resource
+
 resources:
 - name: new-starters
   type: git
@@ -19,16 +43,33 @@ resources:
     access_key_id: ((misc-ci-artifacts-bucket.access_key_id))
     secret_access_key: ((misc-ci-artifacts-bucket.secret_access_key))
     versioned_file: new-starters/csvs.tar.gz
+- name: pcf-ops
+  type: registry-image
+  icon: docker
+  source:
+    repository: engineerbetter/pcf-ops
+    username: ((dockerhub_user))
+    password: ((dockerhub_password))
+- name: slack
+  type: slack-alert
+  source:
+    url: ((slack_webhook))
+    channel: '#integrations'
+    username: admin
+    password: ((concourse_password))
 
 jobs:
 - name: generate-csvs
+  <<: *alerts
   plan:
   - in_parallel:
     - get: new-starters
       trigger: true
     - get: concourse-tasks
+    - get: pcf-ops
   - task: generate-csvs
     file: new-starters/ci/generate-tracker-csvs.yml
+    image: pcf-ops
   - task: tarball-files
     file: concourse-tasks/tar/task.yml
     input_mapping: { input: csvs }
