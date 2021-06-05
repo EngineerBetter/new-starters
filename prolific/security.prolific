@@ -10,6 +10,28 @@ Check that you can access 1Password successfully. You will need to accept an inv
 
 ---
 
+I can log into AWS
+
+Receive credentials for logging into AWS both via the web console, and via the command line (an `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`).
+
+If you get to this story and no-one has provided these to you, pester your onboarding buddy, or more likely, Deejay.
+
+Store these credentials in your person 1Password vault.
+
+## Acceptance
+
+* Visit https://engineerbetter.1password.com
+* Click "Personal"
+* Observe AWS credentials stored in list
+* Log into [the AWS console](https://console.aws.amazon.com)
+* Observe success
+* If you think you're likely to do things with AWS via the command line:
+  * [Install the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+  * Run `aws sts get-caller-identity`
+  * Observe JSON output with your Access Key ID and name
+
+---
+
 I can easily access shared secrets on shared machines
 
 [Set up your Yubikey to type your 1Password secret key](https://www.engineerbetter.com/blog/yubikey-static-secret/), so you only have to remember your password when using shared machines.
@@ -73,4 +95,3 @@ Set up multi-factor authentication on a variety of services using your Yubikey.
 L: yubikey
 
 ---
-
