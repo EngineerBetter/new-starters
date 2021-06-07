@@ -79,7 +79,7 @@ Hackers cannot log in as me without stealing something I own
 
 Set up multi-factor authentication on a variety of services using your Yubikey.
 
-1. [Start with GitHub using the instructions in out blog](https://www.engineerbetter.com/blog/yubikey-2fa/)
+1. [Start with GitHub using the instructions in our blog](https://www.engineerbetter.com/blog/yubikey-2fa/)
 1. Configure U2F in AWS
 1. Configure U2F for Google
 
