@@ -1,0 +1,96 @@
+I know what Cloud Foundry is
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _What is Cloud Foundry?_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know how to use the CF CLI
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Interacting with Cloud Foundry via the CLI_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I can push an app to Cloud Foundry
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Pushing Your First App_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know what value buildpacks offer
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Buildpacks_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know how Cloud Foundry makes apps more resilient
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Resilience and Availability_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know how to debug apps on Cloud Foundry
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Debugging_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know how services are attached in Cloud Foundry
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Dealing with State_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
+I know how to route HTTP traffic to Cloud Foundry Apps
+
+In the [Cloud Foundry Zero To Hero](https://zero-to-hero.engineerbetter.com/) training course, complete the _Domains & Routes_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] Diagramming recap
+
+L: instructor-led, cf
+
+---
+
