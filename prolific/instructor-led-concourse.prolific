@@ -1,0 +1,120 @@
+I know what Concourse is
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Concourse Overview_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I know what Concourse is comprised of
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Architecture_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can write a Concourse pipeline
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Pipelines_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can write a Concourse task
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Tasks_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can debug a Concourse task
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Debugging_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I understand how causality works in Concourse
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Chaining Jobs_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I know the umpteen step types in a Concourse job plan
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Plans_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can execute Concourse tasks using local assets
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Executing Tasks_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can securely use secrets in Concourse builds
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Secrets & Parameters_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
+I can restrict access to Concourse pipelines
+
+In the [Concourse Training Course](https://concourse-training.engineerbetter.com/) complete the _Access Control_ section. Mark this story as blocked if you're waiting for a presentation/recap session.
+
+- [ ] Seen presentation
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, concourse
+
+---
+
