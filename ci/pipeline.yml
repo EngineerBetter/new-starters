@@ -101,3 +101,8 @@ jobs:
   - put: s3-bucket
     params:
       file: tarball/csvs.tar.gz
+  - task: delete-stories
+    file: new-starters/ci/delete-stories.yml
+    params: 
+      TRACKER_PROJECT_ID: "2530961"
+      TRACKER_TOKEN: ((tracker_token))

@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: {repository: engineerbetter/pcf-ops}
+
+inputs:
+- name: new-starters
+
+run:
+  path: new-starters/ci/delete-stories.sh
+
+params: 
+  TRACKER_TOKEN: 
+  TRACKER_PROJECT_ID: 
