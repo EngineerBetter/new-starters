@@ -64,7 +64,7 @@ resources:
 - name: tracker-http-api
   type: concourse-http-resource
   source:
-    url: https://www.pivotaltracker.com/services/v5/projects/2114884/stories/bulk
+    url: https://www.pivotaltracker.com/services/v5/projects/2114884/stories
     method: GET
     headers:
       Content-Type: "application/json"
