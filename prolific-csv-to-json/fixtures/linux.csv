@@ -1,0 +1,81 @@
+Title,Type,Description,Labels
+I know the differences between Linux distributions,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Getting Started_ section.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I have used various Linux commands,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Command Line_ section.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how to manipulate text with Linux commands,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Text Fu_ section.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how to manipulate text with regex and vim,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Advanced Text Fu_ section, *skipping the `emacs` section* because not many folks here use it. If you want to use `emacs`, that's cool, but don't consider it mandatory.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how users work in Linux,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _User Management_ section.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how file permissions work in Linux,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Permissions_ section.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how processes work on Linux,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Processes_ section, so that you're well-equipped to debug things that we deploy and live production issues.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how to install things on different Linux distributions,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Packages_ section, so that you are able to install things when building new container images.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how the Linux filesystem works,feature,"On [Linux Journey](https://linuxjourney.com/) complete _The Filesystem_ section, so that you know where types of file belong, and how to manage disks.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how to monitor processes,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Process Utilization_ section, as this will be invaluable knowledge for debugging misbehaving services.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how to find debug information in Linux,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Logging_ section, so that you can look for clues when stuff inevitably goes wrong.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know what the Linux kernel is and how it works,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Kernel_ section. Whilst this may be a heavy-going and abstract section, it's really important for understanding more about containers
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know roughly how networks work,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Networking Basics_ section. Networking knowledge is really valuable for systems engineers, and one could argue that the reason infrastructure automation took so long to come into being is because the developers who knew how to automate things didn't know anything about networks!
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how DNS works,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _DNS_ section. We often have to configure DNS either inside Kubernetes clusters, or in virtualised infrastructure estates. It's a core component of a distributed system, and very easy to get wrong.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how subnets work,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Subnets_ section. Often when working with enterprise customers we need to divide their infrastructure up into different subnets, and make sure that we have enough IP addresses in each.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
+I know how network routing works,feature,"On [Linux Journey](https://linuxjourney.com/) complete the _Routing_ section. Another quite detailed topic, this is _really_ useful when debugging connectivity issues.
+
+## Acceptance Steps
+
+* Talk to your mentor about what you've learnt","self-paced,linux"
