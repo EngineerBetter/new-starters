@@ -22,10 +22,6 @@ resource_types:
   type: registry-image
   source:
     repository: arbourd/concourse-slack-alert-resource
-- name: concourse-http-resource
-  type: docker-image
-  source:
-    repository: edtan1/concourse-http-resource
 
 resources:
 - name: new-starters
@@ -61,14 +57,6 @@ resources:
     channel: '#integrations'
     username: admin
     password: ((concourse_password))
-- name: tracker-http-api
-  type: concourse-http-resource
-  source:
-    url: https://www.pivotaltracker.com/services/v5/projects/2114884/stories
-    method: GET
-    headers:
-      Content-Type: "application/json"
-      X-TrackerToken: 89f4b2ed3c09f3690e1b14fff75c62b1
 
 jobs:
 - name: set-pipeline
@@ -88,7 +76,6 @@ jobs:
       passed: [set-pipeline]
     - get: concourse-tasks
     - get: pcf-ops
-  - put: tracker-http-api
   - task: generate-csvs
     file: new-starters/ci/generate-tracker-csvs.yml
     image: pcf-ops
