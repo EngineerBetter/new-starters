@@ -59,7 +59,8 @@ jobs:
   - set_pipeline: self
     file: new-starters/ci/pipeline.yml
 
-- name: generate-csvs
+- name: create-icebox
+  serial: true
   <<: *alerts
   plan:
   - in_parallel:
