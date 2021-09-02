@@ -50,19 +50,20 @@ jobs:
   serial: true
   <<: *alerts
   plan:
+  - get: new-starters
+    trigger: true
+    passed: [set-pipeline]
   - in_parallel:
-    - get: new-starters
-      trigger: true
-      passed: [set-pipeline]
-  - task: delete-stories
-    file: new-starters/ci/delete-stories.yml
-    params:
-      TRACKER_PROJECT_ID: &tracker_project_id "2530961"
-      TRACKER_TOKEN: ((tracker_token))
-  - task: generate-csvs
-    file: new-starters/ci/generate-tracker-csvs.yml
-  - task: convert-csvs
-    file: new-starters/ci/convert-csv-to-json.yml
+    - task: delete-stories
+      file: new-starters/ci/delete-stories.yml
+      params:
+        TRACKER_PROJECT_ID: &tracker_project_id "2530961"
+        TRACKER_TOKEN: ((tracker_token))
+    - do:
+      - task: generate-csvs
+        file: new-starters/ci/generate-tracker-csvs.yml
+      - task: convert-csvs
+        file: new-starters/ci/convert-csv-to-json.yml
   - task: create-stories
     file: new-starters/ci/create-stories.yml
     params:
