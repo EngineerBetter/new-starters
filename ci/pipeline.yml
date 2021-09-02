@@ -54,7 +54,6 @@ jobs:
     - get: new-starters
       trigger: true
       passed: [set-pipeline]
-    - get: pcf-ops
   - task: delete-stories
     file: new-starters/ci/delete-stories.yml
     params:
