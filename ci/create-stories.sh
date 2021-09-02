@@ -21,4 +21,4 @@ while IFS= read -r line; do
     1> /dev/null
 
   echo " done!"
-done <<< "$( cat jsons/*.json )"
+done <<< "$( cat jsons/*.json | grep . )"
