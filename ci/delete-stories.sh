@@ -13,7 +13,7 @@ ids="$(curl \
     --request GET \
     --header "X-TrackerToken: $TRACKER_TOKEN" \
     "$api_url/projects/$TRACKER_PROJECT_ID/stories" \
-    | jq --raw '.[].id')"
+    | jq --raw-output '.[].id')"
 
 xargs -I{} \
     curl \
