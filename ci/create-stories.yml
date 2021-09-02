@@ -1,0 +1,17 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: {repository: engineerbetter/pcf-ops}
+
+inputs:
+- name: new-starters
+- name: jsons
+
+run:
+  path: new-starters/ci/create-stories.sh
+
+params: 
+  TRACKER_TOKEN: 
+  TRACKER_PROJECT_ID:
