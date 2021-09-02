@@ -30,11 +30,6 @@ resources:
   source:
     uri: https://github.com/EngineerBetter/new-starters.git
     branch: main
-- name: concourse-tasks
-  type: git
-  source:
-    uri: https://github.com/EngineerBetter/concourse-tasks.git
-    tag_filter: 0.0.39
 - name: pcf-ops
   type: registry-image
   icon: docker
@@ -67,7 +62,6 @@ jobs:
     - get: new-starters
       trigger: true
       passed: [set-pipeline]
-    - get: concourse-tasks
     - get: pcf-ops
   - task: delete-stories
     file: new-starters/ci/delete-stories.yml
