@@ -7,6 +7,20 @@ set -euo pipefail
 
 api_url="https://www.pivotaltracker.com/services/v5"
 
-ids="$(curl -X GET -H "X-TrackerToken: $TRACKER_TOKEN" "$api_url/projects/$TRACKER_PROJECT_ID/stories" | jq -r '.[].id')" 
+ids="$(curl \
+    --silent \
+    --show-error \
+    --request GET \
+    --header "X-TrackerToken: $TRACKER_TOKEN" \
+    "$api_url/projects/$TRACKER_PROJECT_ID/stories" \
+    | jq --raw '.[].id')"
 
-xargs -I{} curl -X DELETE -H "X-TrackerToken: $TRACKER_TOKEN" -H "Content-Type: application/json" "$api_url/projects/$TRACKER_PROJECT_ID/stories/{}" <<< "$ids"
+xargs -I{} \
+    curl \
+        --silent \
+        --show-error \
+        --request DELETE \
+        --header "X-TrackerToken: $TRACKER_TOKEN" \
+        --header "Content-Type: application/json" \
+        "$api_url/projects/$TRACKER_PROJECT_ID/stories/{}" \
+        <<< "$ids"

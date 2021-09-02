@@ -15,7 +15,7 @@ do
 '| del(.Title, .Type, .Description, .Labels)] '\
 '| map(.labels |= split(",")) | .[]'
 
-    csv2json < "$csv" | jq -c "$jq_query" > "$json_file"
+    csv2json < "$csv" | jq --compact-output "$jq_query" > "$json_file"
 done
 
 cat jsons/*.json
