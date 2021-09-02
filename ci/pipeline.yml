@@ -20,8 +20,7 @@ alerts: &alerts
 resource_types:
 - name: slack-alert
   type: registry-image
-  source:
-    repository: arbourd/concourse-slack-alert-resource
+  source: {repository: arbourd/concourse-slack-alert-resource}
 
 resources:
 - name: new-starters
@@ -30,13 +29,6 @@ resources:
   source:
     uri: https://github.com/EngineerBetter/new-starters.git
     branch: main
-- name: pcf-ops
-  type: registry-image
-  icon: docker
-  source:
-    repository: engineerbetter/pcf-ops
-    username: ((dockerhub_user))
-    password: ((dockerhub_password))
 - name: slack
   type: slack-alert
   source:
@@ -70,7 +62,6 @@ jobs:
       TRACKER_TOKEN: ((tracker_token))
   - task: generate-csvs
     file: new-starters/ci/generate-tracker-csvs.yml
-    image: pcf-ops
   - task: convert-csvs
     file: new-starters/ci/convert-csv-to-json.yml
   - task: create-stories
