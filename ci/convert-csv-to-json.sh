@@ -13,8 +13,8 @@ do
 '| .["description"] = .Description '\
 '| .["labels"] = .Labels '\
 '| del(.Title, .Type, .Description, .Labels)] '\
-'| map(.labels |= split(",")) '\
-'| select(.name != "") | .[]'
+'| map(.labels |= split(",")) | .[] '\
+'| select(.name != "")'
 
     csv2json < "$csv" | jq --compact-output "$jq_query" > "$json_file"
 done
