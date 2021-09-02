@@ -11,6 +11,8 @@ while IFS= read -r line; do
   echo -n "Creating story \"$( jq -r '.name' <<< "$line" )\"..."
 
   curl \
+    --silent \
+    --show-error \
     --request POST \
     --header "X-TrackerToken: $TRACKER_TOKEN" \
     --header 'Content-Type: application/json' \
