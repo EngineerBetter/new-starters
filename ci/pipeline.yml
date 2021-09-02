@@ -36,12 +36,17 @@ resources:
     channel: '#integrations'
     username: admin
     password: ((concourse_password))
+- name: every-1h
+  type: time
+  source: {interval: 2m}
 
 jobs:
 - name: set-pipeline
   <<: *alerts
   plan:
   - get: new-starters
+    trigger: true
+  - get: every-1h
     trigger: true
   - set_pipeline: self
     file: new-starters/ci/pipeline.yml
@@ -51,6 +56,9 @@ jobs:
   <<: *alerts
   plan:
   - get: new-starters
+    trigger: true
+    passed: [set-pipeline]
+  - get: every-1h
     trigger: true
     passed: [set-pipeline]
   - in_parallel:
