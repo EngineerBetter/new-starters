@@ -1,0 +1,16 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: {repository: engineerbetter/pcf-ops}
+
+inputs:
+- name: new-starters
+- name: csvs
+
+run:
+  path: new-starters/ci/convert-csv-to-json.sh
+
+outputs:
+  - name: jsons
