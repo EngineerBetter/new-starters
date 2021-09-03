@@ -36,7 +36,7 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 				Type:        line[1],
 				Description: line[2],
 				Labels:      line[3],
-				Tasks:       line[4],
+				Tasks:       "[" + line[4] + "]",
 			})
 		}
 	}

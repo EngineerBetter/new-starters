@@ -55,12 +55,22 @@ var _ = Describe("Trackercsv", func() {
 			Type:        "BBB",
 			Description: "CCC",
 			Labels:      "DDD,EEE",
-			Tasks:       "Completed: Methods",
+			Tasks:       "[Completed: Methods]",
 		}}))
 	})
 
-	// One task
+	// It("normalises many tasks", func() {
+	// 	csv := bytes.NewBufferString("Title,Type,Description,Labels, Tasks\nAAA,BBB,CCC,\"DDD,EEE\",Completed: Methods")
 
-	// Many tasks
+	// 	normal, err := trackercsv.New(csv)
 
+	// 	Expect(err).NotTo(HaveOccurred())
+	// 	Expect(normal).To(Equal([]trackercsv.NormalisedTrackerCSV{{
+	// 		Title:       "AAA",
+	// 		Type:        "BBB",
+	// 		Description: "CCC",
+	// 		Labels:      "DDD,EEE",
+	// 		Tasks:       "Completed: Methods",
+	// 	}}))
+	// })
 })
