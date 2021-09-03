@@ -3,6 +3,7 @@ package trackercsv
 import (
 	"encoding/csv"
 	"io"
+	"strings"
 )
 
 type NormalisedTrackerCSV struct {
@@ -23,7 +24,7 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 	output := []NormalisedTrackerCSV{}
 
 	for _, line := range content[1:] {
-		if len(line) != 5 {
+		if len(line) < 5 {
 			output = append(output, NormalisedTrackerCSV{
 				Title:       line[0],
 				Type:        line[1],
@@ -31,12 +32,20 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 				Labels:      line[3],
 			})
 		} else {
+			var task_list []string
+
+			for _, task := range line[4:] {
+				task_list = append(task_list, task)
+			}
+
+			tasks := "[" + strings.Join(task_list, ",") + "]"
+
 			output = append(output, NormalisedTrackerCSV{
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
 				Labels:      line[3],
-				Tasks:       "[" + line[4] + "]",
+				Tasks:       tasks,
 			})
 		}
 	}
