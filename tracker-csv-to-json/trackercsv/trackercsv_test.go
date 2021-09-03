@@ -10,15 +10,16 @@ import (
 )
 
 var _ = Describe("Trackercsv", func() {
-	PIt("normalises the csv", func() {
-		csv := bytes.NewBufferString(`Title,Type,Description,Labels\nAAA,BBB,CCC,"DDD,EEE"`)
-		normal := trackercsv.New(csv)
+	It("normalises the csv", func() {
+		csv := bytes.NewBufferString("Title,Type,Description,Labels\nAAA,BBB,CCC,\"DDD,EEE\"")
+		normal, err := trackercsv.New(csv)
 
-		Expect(normal).To(Equal(trackercsv.NormalisedTrackerCSV{
+		Expect(err).NotTo(HaveOccurred())
+		Expect(normal).To(Equal([]trackercsv.NormalisedTrackerCSV{{
 			Title:       "AAA",
 			Type:        "BBB",
 			Description: "CCC",
-			Labels:      `"DDD,EEE"`,
-		}))
+			Labels:      "DDD,EEE",
+		}}))
 	})
 })
