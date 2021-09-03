@@ -23,12 +23,22 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 	output := []NormalisedTrackerCSV{}
 
 	for _, line := range content[1:] {
-		output = append(output, NormalisedTrackerCSV{
-			Title:       line[0],
-			Type:        line[1],
-			Description: line[2],
-			Labels:      line[3],
-		})
+		if len(line) != 5 {
+			output = append(output, NormalisedTrackerCSV{
+				Title:       line[0],
+				Type:        line[1],
+				Description: line[2],
+				Labels:      line[3],
+			})
+		} else {
+			output = append(output, NormalisedTrackerCSV{
+				Title:       line[0],
+				Type:        line[1],
+				Description: line[2],
+				Labels:      line[3],
+				Tasks:       line[4],
+			})
+		}
 	}
 
 	return output, nil
