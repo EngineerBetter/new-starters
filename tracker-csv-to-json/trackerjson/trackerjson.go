@@ -27,3 +27,16 @@ func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (Normalised
 
 	return output, nil
 }
+
+func Convert(input []NormalisedTrackerCSV) ([]NormalisedTrackerJSON, error) {
+	var output []NormalisedTrackerJSON
+
+	for _, item := range input {
+		convertedItem, err := ConvertCSVStructToJSONSTruct(item)
+		if err != nil {
+			return nil, err
+		}
+		output = append(output, convertedItem)
+	}
+	return output, nil
+}

@@ -29,26 +29,40 @@ var _ = Describe("Trackerjson", func() {
 		Expect(normal).To(Equal(res))
 	})
 
-	// PIt("Returns two jsonl objects", func() {
-	// 	input := trackerjson.NormalisedTrackerCSV{{
-	// 		Title:       "AAA",
-	// 		Type:        "BBB",
-	// 		Description: "CCC",
-	// 		Labels:      []string{"DDD", "EEE"},
-	// 		Tasks:       []string{},
-	// 	},
-	// 		{
-	// 			Title:       "TEST2",
-	// 			Type:        "TEST3",
-	// 			Description: "TEST4",
-	// 			Labels:      []string{"TEST5", "TEST6"},
-	// 			Tasks:       []string{},
-	// 		}}
+	It("Returns two jsonl objects", func() {
+		input := []trackerjson.NormalisedTrackerCSV{{
+			Title:       "AAA",
+			Type:        "BBB",
+			Description: "CCC",
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{},
+		},
+			{
+				Title:       "TEST2",
+				Type:        "TEST3",
+				Description: "TEST4",
+				Labels:      []string{"TEST5", "TEST6"},
+				Tasks:       []string{},
+			}}
 
-	// 	normal, err := trackerjson.ConvertCSVStructToJSONSTruct(input)
-	// 	res := []byte(`{"name":"AAA","story_type":"BBB","description":"CCC","labels":"DDD,EEE","tasks":""}{"name":"TEST2","story_type":"TEST3","description":"TEST4","labels":"TEST5, TEST6","tasks":""}`)
+		normal, err := trackerjson.Convert(input)
 
-	// 	Expect(err).NotTo(HaveOccurred())
-	// 	Expect(normal).To(Equal(res))
-	// })
+		res := []trackerjson.NormalisedTrackerJSON{{
+			Name:        "AAA",
+			Story_type:  "BBB",
+			Description: "CCC",
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{},
+		},
+			{
+				Name:        "TEST2",
+				Story_type:  "TEST3",
+				Description: "TEST4",
+				Labels:      []string{"TEST5", "TEST6"},
+				Tasks:       []string{},
+			}}
+
+		Expect(err).NotTo(HaveOccurred())
+		Expect(normal).To(Equal(res))
+	})
 })
