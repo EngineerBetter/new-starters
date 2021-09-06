@@ -23,8 +23,8 @@ var _ = Describe("Trackercsv", func() {
 		}}))
 	})
 
-	PIt("normalises two lines of the csv", func() {
-		csv := bytes.NewBufferString("Title,Type,Description,Labels\nAAA,BBB,CCC,\"DDD, EEE\"\nFFF,GGG,HHH,\"III, JJJ\"")
+	It("normalises two lines of the csv", func() {
+		csv := bytes.NewBufferString("Title,Type,Description,Labels\nAAA,BBB,CCC,\"DDD,EEE\"\nFFF,GGG,HHH,\"III,JJJ\"")
 		normal, err := trackercsv.New(csv)
 
 		Expect(err).NotTo(HaveOccurred())
@@ -38,7 +38,7 @@ var _ = Describe("Trackercsv", func() {
 			Title:       "FFF",
 			Type:        "GGG",
 			Description: "HHH",
-			Labels:      []string{"III,JJJ"},
+			Labels:      []string{"III", "JJJ"},
 			Tasks:       []string{},
 		}}))
 	})
