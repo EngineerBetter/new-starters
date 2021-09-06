@@ -1,24 +1,29 @@
 package trackerjson
 
-import (
-	"encoding/json"
-)
-
 type NormalisedTrackerCSV struct {
-	Title       string `json:"name"`
-	Type        string `json:"story_type"`
-	Description string `json:"description"`
-	Labels      string `json:"labels"`
-	Tasks       string `json:"tasks"`
+	Title       string
+	Type        string
+	Description string
+	Labels      []string
+	Tasks       []string
 }
 
-func Convert(trackerInput []NormalisedTrackerCSV) ([]byte, error) {
-	var output []byte
+type NormalisedTrackerJSON struct {
+	Name        string
+	Story_type  string
+	Description string
+	Labels      []string
+	Tasks       []string
+}
 
-	for _, list := range trackerInput {
-		b, _ := json.Marshal(list)
-		output = append(output, b...)
+func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (NormalisedTrackerJSON, error) {
+	var output NormalisedTrackerJSON
 
-	}
+	output.Name = trackerInput.Title
+	output.Story_type = trackerInput.Type
+	output.Description = trackerInput.Description
+	output.Labels = trackerInput.Labels
+	output.Tasks = trackerInput.Tasks
+
 	return output, nil
 }

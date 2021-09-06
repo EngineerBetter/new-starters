@@ -7,42 +7,48 @@ import (
 )
 
 var _ = Describe("Trackerjson", func() {
-	PIt("Returns one jsonl object", func() {
-		input := []trackerjson.NormalisedTrackerCSV{{
+	It("Returns one NormalisedTrackerJSON", func() {
+		input := trackerjson.NormalisedTrackerCSV{
 			Title:       "AAA",
 			Type:        "BBB",
 			Description: "CCC",
-			Labels:      "DDD,EEE",
-			Tasks:       "",
-		}}
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{},
+		}
 
-		normal, err := trackerjson.Convert(input)
-		res := []byte(`{"name":"AAA","story_type":"BBB","description":"CCC","labels":"DDD,EEE","tasks":""}`)
+		normal, err := trackerjson.ConvertCSVStructToJSONSTruct(input)
+		res := trackerjson.NormalisedTrackerJSON{
+			Name:        "AAA",
+			Story_type:  "BBB",
+			Description: "CCC",
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{},
+		}
 
 		Expect(err).NotTo(HaveOccurred())
 		Expect(normal).To(Equal(res))
 	})
 
-	PIt("Returns two jsonl objects", func() {
-		input := []trackerjson.NormalisedTrackerCSV{{
-			Title:       "AAA",
-			Type:        "BBB",
-			Description: "CCC",
-			Labels:      "DDD,EEE",
-			Tasks:       "",
-		},
-			{
-				Title:       "TEST2",
-				Type:        "TEST3",
-				Description: "TEST4",
-				Labels:      "TEST5,TEST6",
-				Tasks:       "",
-			}}
+	// PIt("Returns two jsonl objects", func() {
+	// 	input := trackerjson.NormalisedTrackerCSV{{
+	// 		Title:       "AAA",
+	// 		Type:        "BBB",
+	// 		Description: "CCC",
+	// 		Labels:      []string{"DDD", "EEE"},
+	// 		Tasks:       []string{},
+	// 	},
+	// 		{
+	// 			Title:       "TEST2",
+	// 			Type:        "TEST3",
+	// 			Description: "TEST4",
+	// 			Labels:      []string{"TEST5", "TEST6"},
+	// 			Tasks:       []string{},
+	// 		}}
 
-		normal, err := trackerjson.Convert(input)
-		res := []byte(`{"name":"AAA","story_type":"BBB","description":"CCC","labels":"DDD,EEE","tasks":""}{"name":"TEST2","story_type":"TEST3","description":"TEST4","labels":"TEST5,TEST6","tasks":""}`)
+	// 	normal, err := trackerjson.ConvertCSVStructToJSONSTruct(input)
+	// 	res := []byte(`{"name":"AAA","story_type":"BBB","description":"CCC","labels":"DDD,EEE","tasks":""}{"name":"TEST2","story_type":"TEST3","description":"TEST4","labels":"TEST5, TEST6","tasks":""}`)
 
-		Expect(err).NotTo(HaveOccurred())
-		Expect(normal).To(Equal(res))
-	})
+	// 	Expect(err).NotTo(HaveOccurred())
+	// 	Expect(normal).To(Equal(res))
+	// })
 })
