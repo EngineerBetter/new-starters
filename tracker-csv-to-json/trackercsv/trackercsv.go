@@ -36,15 +36,14 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 			var task_list []string
 
 			for _, task := range line[4:] {
-				quoted_task := "\"" + task + "\""
-				task_list = append(task_list, quoted_task)
+				task_list = append(task_list, task)
 			}
 
 			output = append(output, NormalisedTrackerCSV{
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
-				Labels:      []string{line[3]},
+				Labels:      strings.Split(line[3], ","),
 				Tasks:       task_list,
 			})
 

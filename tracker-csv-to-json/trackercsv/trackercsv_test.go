@@ -43,7 +43,7 @@ var _ = Describe("Trackercsv", func() {
 		}}))
 	})
 
-	PIt("normalises one task", func() {
+	It("normalises one task", func() {
 		csv := bytes.NewBufferString("Title,Type,Description,Labels, Tasks\nAAA,BBB,CCC,\"DDD,EEE\",Completed: Methods")
 
 		normal, err := trackercsv.New(csv)
