@@ -7,7 +7,7 @@ import (
 )
 
 var _ = Describe("Trackerjson", func() {
-	It("Returns one jsonl object", func() {
+	PIt("Returns one jsonl object", func() {
 		input := []trackerjson.NormalisedTrackerCSV{{
 			Title:       "AAA",
 			Type:        "BBB",
@@ -23,7 +23,7 @@ var _ = Describe("Trackerjson", func() {
 		Expect(normal).To(Equal(res))
 	})
 
-	It("Returns two jsonl objects", func() {
+	PIt("Returns two jsonl objects", func() {
 		input := []trackerjson.NormalisedTrackerCSV{{
 			Title:       "AAA",
 			Type:        "BBB",

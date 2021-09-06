@@ -10,8 +10,8 @@ type NormalisedTrackerCSV struct {
 	Title       string
 	Type        string
 	Description string
-	Labels      string
-	Tasks       string
+	Labels      []string
+	Tasks       []string
 }
 
 func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
@@ -29,7 +29,8 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
-				Labels:      line[3],
+				Labels:      strings.Split(line[3], ","),
+				Tasks:       []string{},
 			})
 		} else {
 			var task_list []string
@@ -39,15 +40,14 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 				task_list = append(task_list, quoted_task)
 			}
 
-			tasks := "[" + strings.Join(task_list, ",") + "]"
-
 			output = append(output, NormalisedTrackerCSV{
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
-				Labels:      line[3],
-				Tasks:       tasks,
+				Labels:      []string{line[3]},
+				Tasks:       task_list,
 			})
+
 		}
 	}
 
