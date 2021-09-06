@@ -4,7 +4,6 @@ import (
 	"bytes"
 
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
-
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )
@@ -55,7 +54,7 @@ var _ = Describe("Trackercsv", func() {
 			Type:        "BBB",
 			Description: "CCC",
 			Labels:      "DDD,EEE",
-			Tasks:       "[Completed: Methods]",
+			Tasks:       "[\"Completed: Methods\"]",
 		}}))
 	})
 
@@ -70,7 +69,7 @@ var _ = Describe("Trackercsv", func() {
 			Type:        "BBB",
 			Description: "CCC",
 			Labels:      "DDD,EEE",
-			Tasks:       "[Completed: AAA,Completed: BBB]",
+			Tasks:       "[\"Completed: AAA\",\"Completed: BBB\"]",
 		}}))
 	})
 })
