@@ -1,10 +1,10 @@
 package acceptance_test
 
 import (
-	"bufio"
 	"bytes"
-	"encoding/json"
+	"io/ioutil"
 	"os/exec"
+	"strings"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -30,10 +30,14 @@ var _ = Describe("Acceptance", func() {
 		})
 
 		By("outputting JSONL", func() {
-			scanner := bufio.NewScanner(&output)
-			for scanner.Scan() {
-				l := line{}
-				Expect(json.Unmarshal(scanner.Bytes(), &l)).To(Succeed())
+			lines := strings.Split(strings.TrimSpace(output.String()), "\n")
+			content, err := ioutil.ReadFile("fixtures/golang.jsonl")
+			Expect(err).NotTo(HaveOccurred())
+			fixtureLines := strings.Split(strings.TrimSpace(string(content)), "\n")
+
+			Expect(lines).To(HaveLen(len(fixtureLines)))
+			for i := range lines {
+				Expect(lines[i]).To(MatchJSON(fixtureLines[i]))
 			}
 		})
 	})

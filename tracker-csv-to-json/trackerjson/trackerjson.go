@@ -2,14 +2,6 @@ package trackerjson
 
 import "github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
 
-// type NormalisedTrackerCSV struct {
-// 	Title       string
-// 	Type        string
-// 	Description string
-// 	Labels      []string
-// 	Tasks       []string
-// }
-
 type NormalisedTrackerJSON struct {
 	Name        string   `json:"name"`
 	Story_type  string   `json:"story_type"`

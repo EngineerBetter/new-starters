@@ -72,4 +72,19 @@ var _ = Describe("Trackercsv", func() {
 			Tasks:       []string{"Completed: AAA", "Completed: BBB"},
 		}}))
 	})
+
+	It("normalises one task, when the file has many task columns", func() {
+		csv := bytes.NewBufferString("Title,Type,Description,Labels, Task, Task, Task\nAAA,BBB,CCC,\"DDD,EEE\",Completed: AAA,Completed: BBB,\"\"")
+
+		normal, err := trackercsv.New(csv)
+
+		Expect(err).NotTo(HaveOccurred())
+		Expect(normal).To(Equal([]trackercsv.NormalisedTrackerCSV{{
+			Title:       "AAA",
+			Type:        "BBB",
+			Description: "CCC",
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{"Completed: AAA", "Completed: BBB"},
+		}}))
+	})
 })

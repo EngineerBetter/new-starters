@@ -1,10 +1,8 @@
 package main
 
 import (
-	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
@@ -12,35 +10,34 @@ import (
 )
 
 func main() {
-	file := os.Args[1]
+	path := os.Args[1]
 
-	csvData, err := ioutil.ReadFile(file) // just pass the file name
-	if err != nil {
-		fmt.Print(err)
-	}
+	file, err := os.Open(path) // just pass the file name
+	bailOnError(err, "open file")
+	defer file.Close()
 
-	r := bytes.NewReader(csvData)
-	normalisedTrackerCsvStruct, err := trackercsv.New(r)
+	normalisedTrackerCsvStruct, err := trackercsv.New(file)
 
-	if err != nil {
-		fmt.Println(err)
-	}
+	bailOnError(err, "normalise csv")
 
 	normalisedJsonStructs, err := trackerjson.BulkConvert(normalisedTrackerCsvStruct)
 
-	if err != nil {
-		fmt.Println(err)
-	}
+	bailOnError(err, "convert csv to json")
 
 	for _, line := range normalisedJsonStructs {
 		jsonOutput, err := json.Marshal(line)
 
-		if err != nil {
-			fmt.Println("ERROR OCCURING: ", err)
-		}
+		bailOnError(err, "marshal output")
 
-		os.Stdout.Write(jsonOutput[:])
-		fmt.Println("")
+		fmt.Println(string(jsonOutput))
+
 	}
 
+}
+
+func bailOnError(err error, message string) {
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "%s: %v", message, err)
+		os.Exit(1)
+	}
 }
