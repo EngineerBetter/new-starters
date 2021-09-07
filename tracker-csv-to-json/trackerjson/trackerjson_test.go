@@ -1,6 +1,8 @@
 package trackerjson_test
 
 import (
+	"encoding/json"
+
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackerjson"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -45,7 +47,7 @@ var _ = Describe("Trackerjson", func() {
 				Tasks:       []string{},
 			}}
 
-		normal, err := trackerjson.Convert(input)
+		normal, err := trackerjson.BulkConvert(input)
 
 		res := []trackerjson.NormalisedTrackerJSON{{
 			Name:        "AAA",
@@ -64,5 +66,19 @@ var _ = Describe("Trackerjson", func() {
 
 		Expect(err).NotTo(HaveOccurred())
 		Expect(normal).To(Equal(res))
+	})
+
+	It("Converts one NormalisedTrackerJSON to json object", func() {
+		trackerStruct := []trackerjson.NormalisedTrackerJSON{{
+			Name:        "AAA",
+			Story_type:  "BBB",
+			Description: "CCC",
+			Labels:      []string{"DDD", "EEE"},
+			Tasks:       []string{},
+		}}
+		jsonStruct, _ := json.Marshal(trackerStruct)
+
+		Expect(jsonStruct).Should(MatchJSON(`[{"name":"AAA","story_type":"BBB","description":"CCC","labels":["DDD","EEE"],"tasks":[]}]`))
+
 	})
 })

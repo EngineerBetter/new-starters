@@ -9,11 +9,11 @@ type NormalisedTrackerCSV struct {
 }
 
 type NormalisedTrackerJSON struct {
-	Name        string
-	Story_type  string
-	Description string
-	Labels      []string
-	Tasks       []string
+	Name        string   `json:"name"`
+	Story_type  string   `json:"story_type"`
+	Description string   `json:"description"`
+	Labels      []string `json:"labels"`
+	Tasks       []string `json:"tasks"`
 }
 
 func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (NormalisedTrackerJSON, error) {
@@ -28,10 +28,10 @@ func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (Normalised
 	return output, nil
 }
 
-func Convert(input []NormalisedTrackerCSV) ([]NormalisedTrackerJSON, error) {
+func BulkConvert(trackerItems []NormalisedTrackerCSV) ([]NormalisedTrackerJSON, error) {
 	var output []NormalisedTrackerJSON
 
-	for _, item := range input {
+	for _, item := range trackerItems {
 		convertedItem, err := ConvertCSVStructToJSONSTruct(item)
 		if err != nil {
 			return nil, err
