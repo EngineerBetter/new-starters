@@ -24,8 +24,8 @@ func main() {
 
 	bailOnError(err, "convert csv to json")
 
-	for _, line := range normalisedJsonStructs {
-		jsonOutput, err := json.Marshal(line)
+	for i := len(normalisedJsonStructs) - 1; i >= 0; i-- {
+		jsonOutput, err := json.Marshal(normalisedJsonStructs[i])
 
 		bailOnError(err, "marshal output")
 
