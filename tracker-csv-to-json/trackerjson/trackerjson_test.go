@@ -25,7 +25,7 @@ var _ = Describe("Trackerjson", func() {
 			Story_type:  "BBB",
 			Description: "CCC",
 			Labels:      []string{"DDD", "EEE"},
-			Tasks:       []string{},
+			Tasks:       []trackerjson.TrackerTask{},
 		}
 
 		Expect(err).NotTo(HaveOccurred())
@@ -55,14 +55,14 @@ var _ = Describe("Trackerjson", func() {
 			Story_type:  "BBB",
 			Description: "CCC",
 			Labels:      []string{"DDD", "EEE"},
-			Tasks:       []string{},
+			Tasks:       []trackerjson.TrackerTask{},
 		},
 			{
 				Name:        "TEST2",
 				Story_type:  "TEST3",
 				Description: "TEST4",
 				Labels:      []string{"TEST5", "TEST6"},
-				Tasks:       []string{},
+				Tasks:       []trackerjson.TrackerTask{},
 			}}
 
 		Expect(err).NotTo(HaveOccurred())
@@ -75,7 +75,7 @@ var _ = Describe("Trackerjson", func() {
 			Story_type:  "BBB",
 			Description: "CCC",
 			Labels:      []string{"DDD", "EEE"},
-			Tasks:       []string{},
+			Tasks:       []trackerjson.TrackerTask{},
 		}}
 		jsonStruct, _ := json.Marshal(trackerStruct)
 

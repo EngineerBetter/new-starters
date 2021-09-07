@@ -3,11 +3,15 @@ package trackerjson
 import "github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
 
 type NormalisedTrackerJSON struct {
-	Name        string   `json:"name"`
-	Story_type  string   `json:"story_type"`
-	Description string   `json:"description"`
-	Labels      []string `json:"labels"`
-	Tasks       []string `json:"tasks"`
+	Name        string        `json:"name"`
+	Story_type  string        `json:"story_type"`
+	Description string        `json:"description"`
+	Labels      []string      `json:"labels"`
+	Tasks       []TrackerTask `json:"tasks"`
+}
+
+type TrackerTask struct {
+	Description string `json:"description"`
 }
 
 func ConvertCSVStructToJSONSTruct(trackerInput trackercsv.NormalisedTrackerCSV) (NormalisedTrackerJSON, error) {
@@ -17,7 +21,11 @@ func ConvertCSVStructToJSONSTruct(trackerInput trackercsv.NormalisedTrackerCSV) 
 	output.Story_type = trackerInput.Type
 	output.Description = trackerInput.Description
 	output.Labels = trackerInput.Labels
-	output.Tasks = trackerInput.Tasks
+	output.Tasks = []TrackerTask{}
+
+	for _, task := range trackerInput.Tasks {
+		output.Tasks = append(output.Tasks, TrackerTask{Description: task})
+	}
 
 	return output, nil
 }
