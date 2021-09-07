@@ -1,0 +1,14 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source: {repository: engineerbetter/pcf-ops}
+
+inputs:
+- name: new-starters
+
+run:
+  path: make 
+  args: [test]
+  dir: new-starters/tracker-csv-to-json
