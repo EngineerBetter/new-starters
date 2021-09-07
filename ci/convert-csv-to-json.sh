@@ -2,19 +2,9 @@
 
 set -euo pipefail
 
-go install github.com/jiangmiao/csv2json@latest
+cd new-starters/tracker-csv-to-json
 
-for csv in csvs/*.csv
-do
-    json_file="jsons/$(basename "$csv" .csv).json"
-    jq_query='[.[] '\
-'| .["name"] = .Title '\
-'| .["story_type"] = .Type '\
-'| .["description"] = .Description '\
-'| .["labels"] = .Labels '\
-'| del(.Title, .Type, .Description, .Labels)] '\
-'| map(.labels |= split(",")) | .[] '\
-'| select(.name != "")'
-
-    csv2json < "$csv" | jq --compact-output "$jq_query" > "$json_file"
+for csv in ../../csvs/*.csv; do
+    json_file="../../jsons/$(basename "$csv" .csv).json"
+    go run main.go "$csv" > "$json_file"
 done
