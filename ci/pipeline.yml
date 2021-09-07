@@ -52,16 +52,29 @@ jobs:
   - set_pipeline: self
     file: new-starters/ci/pipeline.yml
 
+- name: test
+  <<: *alerts
+  plan: 
+  - in_parallel:
+    - get: new-starters
+      trigger: true
+      passed: [set-pipeline]
+    - get: every-3h
+      trigger: true
+      passed: [set-pipeline]
+  - task: test
+    file: new-starters/ci/test.yml
+
 - name: create-icebox
   serial: true
   <<: *alerts
   plan:
   - get: new-starters
     trigger: true
-    passed: [set-pipeline]
+    passed: [test]
   - get: every-3h
     trigger: true
-    passed: [set-pipeline]
+    passed: [test]
   - in_parallel:
     - task: delete-stories
       file: new-starters/ci/delete-stories.yml
