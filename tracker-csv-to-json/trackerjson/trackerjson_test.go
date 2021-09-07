@@ -3,6 +3,7 @@ package trackerjson_test
 import (
 	"encoding/json"
 
+	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackerjson"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -10,7 +11,7 @@ import (
 
 var _ = Describe("Trackerjson", func() {
 	It("Returns one NormalisedTrackerJSON", func() {
-		input := trackerjson.NormalisedTrackerCSV{
+		input := trackercsv.NormalisedTrackerCSV{
 			Title:       "AAA",
 			Type:        "BBB",
 			Description: "CCC",
@@ -32,7 +33,7 @@ var _ = Describe("Trackerjson", func() {
 	})
 
 	It("Returns two jsonl objects", func() {
-		input := []trackerjson.NormalisedTrackerCSV{{
+		input := []trackercsv.NormalisedTrackerCSV{{
 			Title:       "AAA",
 			Type:        "BBB",
 			Description: "CCC",

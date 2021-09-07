@@ -1,12 +1,14 @@
 package trackerjson
 
-type NormalisedTrackerCSV struct {
-	Title       string
-	Type        string
-	Description string
-	Labels      []string
-	Tasks       []string
-}
+import "github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
+
+// type NormalisedTrackerCSV struct {
+// 	Title       string
+// 	Type        string
+// 	Description string
+// 	Labels      []string
+// 	Tasks       []string
+// }
 
 type NormalisedTrackerJSON struct {
 	Name        string   `json:"name"`
@@ -16,7 +18,7 @@ type NormalisedTrackerJSON struct {
 	Tasks       []string `json:"tasks"`
 }
 
-func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (NormalisedTrackerJSON, error) {
+func ConvertCSVStructToJSONSTruct(trackerInput trackercsv.NormalisedTrackerCSV) (NormalisedTrackerJSON, error) {
 	var output NormalisedTrackerJSON
 
 	output.Name = trackerInput.Title
@@ -28,7 +30,7 @@ func ConvertCSVStructToJSONSTruct(trackerInput NormalisedTrackerCSV) (Normalised
 	return output, nil
 }
 
-func BulkConvert(trackerItems []NormalisedTrackerCSV) ([]NormalisedTrackerJSON, error) {
+func BulkConvert(trackerItems []trackercsv.NormalisedTrackerCSV) ([]NormalisedTrackerJSON, error) {
 	var output []NormalisedTrackerJSON
 
 	for _, item := range trackerItems {

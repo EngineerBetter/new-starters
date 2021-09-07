@@ -19,7 +19,7 @@ type line struct {
 }
 
 var _ = Describe("Acceptance", func() {
-	PIt("converts a CSV file to JSONL", func() {
+	It("converts a CSV file to JSONL", func() {
 		cmd := exec.Command("go", "run", "github.com/EngineerBetter/new-starters/tracker-csv-to-json", "./fixtures/golang.csv")
 		output := bytes.Buffer{}
 		cmd.Stdout = &output
