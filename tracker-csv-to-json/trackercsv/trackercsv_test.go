@@ -87,4 +87,19 @@ var _ = Describe("Trackercsv", func() {
 			Tasks:       []string{"Completed: AAA", "Completed: BBB"},
 		}}))
 	})
+
+	It("Does not include a labels key/value pair if labels are blank", func() {
+		csv := bytes.NewBufferString("Title,Type,Description,Labels, Task, Task, Task\nAAA,BBB,CCC,\"\",Completed: AAA,Completed: BBB,\"\"")
+		normal, err := trackercsv.New(csv)
+
+		Expect(err).NotTo(HaveOccurred())
+
+		Expect(normal).To(Equal([]trackercsv.NormalisedTrackerCSV{{
+			Title:       "AAA",
+			Type:        "BBB",
+			Description: "CCC",
+			Labels:      []string{},
+			Tasks:       []string{"Completed: AAA", "Completed: BBB"},
+		}}))
+	})
 })

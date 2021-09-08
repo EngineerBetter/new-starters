@@ -24,12 +24,20 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 	output := []NormalisedTrackerCSV{}
 
 	for _, line := range content[1:] {
+		var labels []string
+
+		if line[3] != "" {
+			labels = strings.Split(line[3], ",")
+		} else {
+			labels = []string{}
+		}
+
 		if len(line) < 5 {
 			output = append(output, NormalisedTrackerCSV{
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
-				Labels:      strings.Split(line[3], ","),
+				Labels:      labels,
 				Tasks:       []string{},
 			})
 		} else {
@@ -45,7 +53,7 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 				Title:       line[0],
 				Type:        line[1],
 				Description: line[2],
-				Labels:      strings.Split(line[3], ","),
+				Labels:      labels,
 				Tasks:       task_list,
 			})
 
