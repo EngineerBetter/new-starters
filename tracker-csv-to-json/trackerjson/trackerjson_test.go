@@ -32,6 +32,28 @@ var _ = Describe("Trackerjson", func() {
 		Expect(normal).To(Equal(res))
 	})
 
+	It("Returns one NormalisedTrackerJSON with blank labels", func() {
+		input := trackercsv.NormalisedTrackerCSV{
+			Title:       "AAA",
+			Type:        "BBB",
+			Description: "CCC",
+			Labels:      []string{},
+			Tasks:       []string{},
+		}
+
+		normal, err := trackerjson.ConvertCSVStructToJSONSTruct(input)
+		res := trackerjson.NormalisedTrackerJSON{
+			Name:        "AAA",
+			Story_type:  "BBB",
+			Description: "CCC",
+			Labels:      []string{},
+			Tasks:       []trackerjson.TrackerTask{},
+		}
+
+		Expect(err).NotTo(HaveOccurred())
+		Expect(normal).To(Equal(res))
+	})
+
 	It("Returns two jsonl objects", func() {
 		input := []trackercsv.NormalisedTrackerCSV{{
 			Title:       "AAA",
