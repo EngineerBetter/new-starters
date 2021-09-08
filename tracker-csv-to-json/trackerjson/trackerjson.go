@@ -6,7 +6,7 @@ type NormalisedTrackerJSON struct {
 	Name        string        `json:"name"`
 	Story_type  string        `json:"story_type"`
 	Description string        `json:"description"`
-	Labels      []string      `json:"labels"`
+	Labels      []string      `json:"labels,omitempty"`
 	Tasks       []TrackerTask `json:"tasks"`
 }
 
