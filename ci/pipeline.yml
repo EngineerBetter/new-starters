@@ -79,7 +79,7 @@ jobs:
     - task: delete-stories
       file: new-starters/ci/delete-stories.yml
       params:
-        TRACKER_PROJECT_ID: &tracker_project_id "2530961"
+        TRACKER_PROJECT_ID: &tracker_project_id "2493827"
         TRACKER_TOKEN: ((tracker_token))
     - do:
       - task: generate-csvs
