@@ -24,12 +24,10 @@ func New(r io.Reader) ([]NormalisedTrackerCSV, error) {
 	output := []NormalisedTrackerCSV{}
 
 	for _, line := range content[1:] {
-		var labels []string
+		labels := []string{}
 
 		if line[3] != "" {
 			labels = strings.Split(line[3], ",")
-		} else {
-			labels = []string{}
 		}
 
 		if len(line) < 5 {
