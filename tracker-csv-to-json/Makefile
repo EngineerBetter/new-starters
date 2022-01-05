@@ -1,5 +1,5 @@
 test: vet
-	ginkgo --race --randomizeAllSpecs -r .
+	ginkgo --race --randomize-all -r .
 
 vet:
 	go vet ./...

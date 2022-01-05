@@ -5,7 +5,7 @@ import (
 
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackercsv"
 	"github.com/EngineerBetter/new-starters/tracker-csv-to-json/trackerjson"
-	. "github.com/onsi/ginkgo"
+	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 )
 
