@@ -8,6 +8,8 @@ Check that you can access 1Password successfully. You will need to accept an inv
 * Log in
 * Observe that `EngineerBetter - All` and `Private` vaults are accessible
 
+L: security
+
 ---
 
 I can log into AWS
@@ -30,6 +32,8 @@ Store these credentials in your Private 1Password vault.
   * Run `aws sts get-caller-identity`
   * Observe JSON output with your Access Key ID and name
 
+L: security
+
 ---
 
 I can easily access shared secrets on shared machines
@@ -49,7 +53,7 @@ I can easily access shared secrets on shared machines
 * Log in
 * Observe success
 
-L: yubikey
+L: yubikey, security
 
 ---
 
@@ -73,6 +77,8 @@ Example services to use Google OAuth/SSO for include:
 
 * If you've read this far, that's all you need to do :)
 
+L: security
+
 ---
 
 Hackers cannot log in as me without stealing something I own
@@ -92,6 +98,6 @@ Set up multi-factor authentication on a variety of services using your Yubikey.
 * Log in to Google
 * Observe prompt to touch Yubikey
 
-L: yubikey
+L: yubikey, security
 
 ---
