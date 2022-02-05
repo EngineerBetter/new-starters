@@ -16,7 +16,7 @@ I can easily push to/pull from GitHub on shared machines
 * Enter your PIN
 * Observe the GUI disappear, and the `git clone` complete successfully
 
-L: yubikey
+L: yubikey, git
 
 ---
 
@@ -37,7 +37,7 @@ I can prove commits with my name on were made by someone with my Yubikey
 * Observe notes showing that the commit was signed
 * (Ignore `WARNING: This key is not certified with a trusted signature!`, this is to do with whether you've told your computer that you've checked that the key that signed the commit really belongs to who it says it does.)
 
-L: yubikey
+L: yubikey, git
 
 ---
 
@@ -50,6 +50,8 @@ Install `git-duet` and follow instructions in the  [`git-authors` repository](ht
 * Observe `GIT_AUTHOR_NAME` and `GIT_AUTHOR_EMAIL` being set to your details
 * Visit https://github.com/EngineerBetter/git-authors/blob/master/authors
 * Observe your commit was pushed
+
+L: git
 
 ---
 
@@ -67,6 +69,8 @@ Install `git-duet` and follow instructions in the [`git-authors` repository](htt
 * Observe `GIT_COMMITTER_NAME` and `GIT_COMMITTER_EMAIL` being set to the other person's details
 * `git-solo YOUR_INITIALS` so it doesn't look like you're pairing when you're not
 
+L: git
+
 ---
 
 I am less likely to commit files I shouldn't
@@ -82,3 +86,5 @@ Follow the instructions in the [`gitignore` repo](https://github.com/EngineerBet
 * `touch INSERT_FILE_FROM_GITIGNORE HERE` - create a file that we're supposed to ignore
 * `git status`
 * Observe no files to add
+
+L: git
