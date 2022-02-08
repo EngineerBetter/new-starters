@@ -1,5 +1,6 @@
 rem to setup scoop see https://scoop.sh
 rem scoop will install the software locally for your user. Use the -g flag if you want them globally
+scoop bucket add extras
 scoop install^
  curl^
  wget^
