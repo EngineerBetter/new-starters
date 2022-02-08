@@ -1,0 +1,205 @@
+# Brewfile
+# 
+# This version is slimmed down because Linux has usually a powerfull
+# package manager build in (e.g. apt, yum,... )
+#
+# Maintained by EngineerBetter
+
+tap 'engineerbetter/tap'
+tap 'remind101/formulae'
+tap 'mfuentesg/tap'
+tap 'cloudfoundry/tap'
+# VMWare Tanzu binaries
+tap 'vmware-tanzu/carvel'
+
+
+### Network {{{
+  # Port scanning utility for large networks
+  brew 'nmap'
+  
+  ## DNS
+  # Command line DNS client https://dns.lookup.dog/
+  brew 'dog'
+  
+  ### }}}
+  
+### Utility {{{
+  # Simplified and community-driven man pages
+  brew 'tldr'
+  
+  # JSON, YAML, XML transformation
+  brew 'jq'
+  brew 'yj'
+  brew 'yq'
+  brew 'xmlstarlet'
+  brew 'ytt'
+  
+  # Tracks most-used directories to make cd smarter
+  brew 'z'
+  ### }}}
+  
+### Programming Language {{{
+  ## Node.js
+  # Platform built on V8 to build network applications
+  brew 'node@14'
+  # Alternative JavaScript package manager by Facebook
+  brew 'yarn'
+  
+  ## Python
+  # Python3
+  brew 'python'
+  # Python version management
+  brew 'pyenv'
+  # Python dependency management tool
+  brew 'pipenv'
+  
+  ## Shellscript
+  # Static analysis and lint tool, for (ba)sh scripts
+  brew 'shellcheck'
+  
+  ## Ruby
+  # Powerful, clean, object-oriented scripting language
+  brew 'ruby'
+  brew 'rbenv'
+  brew 'rbspy'
+  
+  ## Go
+  brew 'golang'
+### }}}
+  
+### Secrets Management {{{
+  # AWS Vault is a tool to securely store and access AWS credentials
+  brew 'aws-vault'
+  # Credhub command-line interface
+  brew 'credhub-cli'
+  # Secures, stores, and tightly controls access to secrets
+  brew 'vault'
+  # Offers more cli functionality than vault
+  #brew 'starkandwayne/cf/safe'
+  ### }}}
+  
+### Git {{{
+  ## Grom committing sensitive information to a git repo
+  brew 'git-secrets'
+  # Text interface for Git repositories
+  brew 'tig'
+  # GitHub CLI tool
+  brew 'gh'
+  # Git Duet
+  tap 'git-duet/tap'
+  brew 'git-duet'
+### }}}
+
+### Code Editor & IDE {{{
+  ## Editor: Vim
+  # Vi 'workalike' with many additional features
+  brew 'vim'
+  # Fast, highly customisable system info script
+  brew 'neofetch'
+  # Ambitious Vim-fork focused on extensibility and agility
+  brew 'neovim'
+### }}}
+
+### Terminal {{{
+  ## Terminal Multiplexer
+  # Terminal multiplexer with VT100/ANSI terminal emulation
+  brew 'screen'
+  # A terminal multiplexer, allowing to access multiple separate terminal sessions
+  # brew 'tmux', args: ['with-utf8proc']
+  brew 'tmux'
+
+  ## Utility
+  # Search tool like grep, but optimized for programmers
+  brew 'ack'
+  # Search tool like grep and The Silver Searcher
+  brew 'ripgrep'
+  # Modern replacement for `ls`
+  brew 'exa'
+  # Display directories as trees (with optional color/HTML output)
+  brew 'tree'
+  # A simple, fast and user-friendly alternative to find
+  brew 'fd'
+  # Manage multiple runtime versions with a single CLI tool
+  brew 'asdf'
+  # Clone of cat with syntax highlighting and Git integration
+  brew 'bat'
+### }}}
+
+### Containers {{{
+  # Tool for repeatable Kubernetes development
+  brew 'skaffold'
+### }}}
+
+### Kubernetes {{{
+  # Kubernetes command-line interface
+  brew 'kubernetes-cli'
+  # Customization of kubernetes YAML configurations
+  brew 'kustomize'
+  # Tool that can switch between kubectl contexts easily and create aliases
+  brew 'kubectx'
+  # Kubernetes CLI to manage cluters in style
+  tap 'derailed/k9s'
+  brew 'k9s'
+  # Package manager for kubectl plugins
+  brew 'krew'
+  # ksd is a tool, whose aim is help you to visualize in text plain your kubernetes secrets
+  brew 'mfuentesg/tap/ksd'
+  # Tool that can switch between kubectl contexts
+  brew 'kubectx'
+  # Tail multiple Kubernetes pods & their containers
+  brew 'stern'
+  # Production Grade K8s Installation, Upgrades, and Management
+  brew 'kops'
+  # Kube in Docker
+  brew 'kind'
+### }}}
+
+### BOSH/CF {{{
+  # Cloudfoundry command-line interface
+  brew 'cf-cli'
+  # BOSH command-line interface
+  brew 'bosh-cli'
+  # CLI to configure and deploy tiles to Ops-Manager
+  tap 'pivotal-cf/om', 'https://github.com/pivotal-cf/om'
+  brew 'pivotal-cf/om/om'
+### }}}
+
+### Concourse {{{
+  # Integration-tests Concourse tasks
+  brew 'engineerbetter/tap/ironbird'
+  # Managed concourse
+  brew 'engineerbetter/tap/control-tower'
+  # OPA cli
+  brew 'opa'
+### }}}
+
+### Terraform {{{
+  # Tool to generate documentation from Terraform modules
+  brew 'terraform-docs'
+  # Terraform linter for detecting errors that can not be detected by `terraform plan`
+  tap 'wata727/tflint'
+  brew 'tflint'
+  # Terraform static analysis tool
+  brew 'tfsec'
+  # Terraform version manager
+  brew 'tfenv'
+### }}}
+
+### Cloud CLI Binaries {{{
+  brew 'awscli'
+  brew 'awslogs'
+  brew 'aws-iam-authenticator'
+  # This tool will request and set temporary credentials in your shell environment variables for a given role.
+  brew 'assume-role'
+  # Azure Binaries
+  brew 'azure-cli'
+  # GCloud Libraries
+  # install with apt
+  #cask 'google-cloud-sdk'
+### }}}
+
+### Security {{{
+  # Tool for managing your YubiKey configuration
+  brew 'ykman'
+### }}}
+

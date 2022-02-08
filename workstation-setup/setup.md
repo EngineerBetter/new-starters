@@ -15,6 +15,6 @@ We use various tools/technologies for client engagements and beach work. You may
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Update brew definitions
 $ brew update
-# Install all the things in the Brewfile
+# Install all the things in the Brewfile (on a Linux machine use `Brewfile-Linux` instead)
 $ brew bundle install --file <(https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
 ```
