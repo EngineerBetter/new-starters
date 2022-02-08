@@ -18,3 +18,9 @@ $ brew update
 # Install all the things in the Brewfile (on a Linux machine use `Brewfile-Linux` instead)
 $ brew bundle install --file <(https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
 ```
+
+## Linux/Windows
+
+[Linux Brewfile](Brewfile-Linux)
+
+If you are on a windows machine read [this guide](windows/setup.md)
