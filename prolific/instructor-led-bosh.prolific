@@ -1,0 +1,107 @@
+I can interact with a BOSH Lite v2 deployed in AWS
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _[Connecting to a deployed BOSH Lite v2](https://bosh-training.engineerbetter.com/labs/connect-to-deployed-bosh/)_ lab.
+
+- [ ] Receive student number from person who set up the environment
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can deploy Cloud Foundry
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Deploying Cloud Foundry_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can test the availability of BOSH deployments
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Interacting with BOSH clusters_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can scale VMs in a BOSH deployment
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Scaling_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can deploy a BOSH release from source
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Deploying Redis_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can update stemcells
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Upgrading with BOSH_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can globally configure BOSH deployments
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Runtime Config & Add-ons_ lab.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can create my own BOSH release
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Making BOSH Releases_ lab. This exercise takes longer than most.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
+
+I can use BPM in a BOSH release
+
+In the [BOSH Training Course](https://bosh-training.engineerbetter.com/) complete the _Improving BOSH Releases_ lab. If you get stuck, Colin Simmons is the best person to ask as he wrote this section.
+
+- [ ] See slides
+- [ ] Exercise
+- [ ] 'What did we just do' recap
+
+L: instructor-led, bosh
+
+---
