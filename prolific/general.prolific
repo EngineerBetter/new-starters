@@ -143,3 +143,22 @@ Business Central sucks, and we're embarassed by it. We will move to something be
 ## Acceptance
 
 * Ivana is happy that the timesheet has been submitted correctly
+
+---
+
+I understand what the Slack channels are for
+
+We try to minimise the number of Slack channels in use at EngineerBetter, and people are encouraged to post on-topic.
+
+* `ask` - genuine asks for help to do with work. People respond here quickly, so please don't spam here.
+* `beach` - non-billable work-related conversation
+* `general` - anything work-related that is cross-cutting, and also suitable for external parties (ie contractors) and alumni
+* `ideas` - things you think we should work on/change at some point
+* `pets` - because one of our contractors has a Dachshund obsession
+* `private` - anything work-related that is not suitable for external parties or alumni
+* `random` - things that are not related to work. We do not want a sprawl of different off-topic channels, because then we won't all be exposed to each other's interests (the one exception is the `books` channel). When posting here, **expect that someone who holds the opposite view is reading**, and treat them with the appropriate level of respect.
+* `til` - 'Today I Learned', which is for genuinely useful learnings. Joke TILs can go in `random` if you really want.
+
+## Acceptance
+
+* Give some examples of what-to-post-where to your onboarding guide
