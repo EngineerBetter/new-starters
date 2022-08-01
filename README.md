@@ -6,7 +6,8 @@ If this is you, then welcome! We'll keep this succinct so information is easier 
 
 ## Onboarding process
 
-You should have been assigned an 'onboarding guide' (if you're unlucky, it'll be [Deejay](https://www.linkedin.com/in/danieljoneseb/)) who will be your point-of-contact if you need help.
+You should have been assigned an 'onboarding guide', who will be your
+point-of-contact if you need help.
 
 Generally speaking, the flow of events is something like:
 
@@ -44,12 +45,14 @@ Access to these and more are granted during the onboarding process. If you can't
 * [GitHub](https://github.com/EngineerBetter) - take a look around at the repos
 * [Slack](https://engineerbetter.slack.com) - please don't sign in on your mobile
 * [Float](https://engineerbetter.float.com) for allocations
-* [FreeAgent](https://engineerbetter.freeagent.com) for expenses.
+* [FreeAgent](https://engineerbetter.freeagent.com) for payroll and pay slips.
+* [Pleo](https://app.pleo.io/) for expenses.
 * [Business Central](https://businesscentral.dynamics.com/DKProd/) for timesheets (Contact Ivana if you're having access issues)
 * [Tracker](https://www.pivotaltracker.com) for story management
 * [Miro](https://miro.com) for collaborative illustrating
 * [Google Drive](https://drive.google.com/drive/folders/1qKZKCuIK9jF_skUv5R0mF7f9MoSYxu8e) for HR/Team related information
-* [Request Leave](https://docs.google.com/forms/d/e/1FAIpQLSdl04LSm1mUzdE1uVw2ZZAQQK_HBS4fOEfldrub0MnvYDBW3A/viewform) - if requesting annual leave it's nice to gain approval from the team
+* [Notion](https://www.notion.so/) for company documentation.
+* [HiBob](https://app.hibob.com/home) for for all HR related documents, time off and sickness.
 
 ## Stuff to install
 
