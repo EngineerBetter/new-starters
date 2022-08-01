@@ -52,7 +52,7 @@ Access to these and more are granted during the onboarding process. If you can't
 * [Miro](https://miro.com) for collaborative illustrating
 * [Google Drive](https://drive.google.com/drive/folders/1qKZKCuIK9jF_skUv5R0mF7f9MoSYxu8e) for HR/Team related information
 * [Notion](https://www.notion.so/) for company documentation.
-* [HiBob](https://app.hibob.com/home) for for all HR related documents, time off and sickness.
+* [HiBob](https://app.hibob.com/home) for all HR related documents, time off and sickness.
 
 ## Stuff to install
 
