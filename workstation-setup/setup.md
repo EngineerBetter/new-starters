@@ -10,13 +10,21 @@ We use various tools/technologies for client engagements and beach work. You may
 
 [This Brewfile](Brewfile) lists commonly-used tools and gives a brief explanation of each, and can also be used with [Homebrew](https://brew.sh) to install all of them:
 
+**Install Homebrew package manager first**
 ```sh
-# Install Homebrew package manager first
-$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Update brew definitions
-$ brew update
-# Install all the things in the Brewfile (on a Linux machine use `Brewfile-Linux` instead)
-$ brew bundle install --file <(curl https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+**Update brew definitions**
+```sh
+brew update
+```
+**Install all the things in the Brewfile (on a Linux machine use `Brewfile-Linux` instead)**
+```sh
+brew bundle install --file <(curl https://raw.githubusercontent.com/EngineerBetter/new-starters/main/workstation-setup/Brewfile)
+```
+**Install gcloud auth plugin**
+```sh
+gcloud components install gke-gcloud-auth-plugin
 ```
 
 ## Linux/Windows
@@ -24,3 +32,8 @@ $ brew bundle install --file <(curl https://raw.githubusercontent.com/EngineerBe
 [Linux Brewfile](Brewfile-Linux)
 
 If you are on a windows machine read [this guide](windows/setup.md)
+
+**Install gcloud auth plugin**
+```sh
+gcloud components install gke-gcloud-auth-plugin
+```
