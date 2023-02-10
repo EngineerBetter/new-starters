@@ -33,7 +33,7 @@ resources:
   type: slack-alert
   source:
     url: ((slack_webhook))
-    channel: '#integrations'
+    channel: '#control-tower-integration'
     username: admin
     password: ((concourse_password))
 - name: every-3h
